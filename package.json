@@ -1,0 +1,16 @@
+{
+  "name": "electron-todo",
+  "version": "1.0.0",
+  "description": "A Simple electon todo application",
+  "main": "main.js",
+  "scripts": {
+    "start": "./node_modules/.bin/electron ."
+  },
+  "author": "Vijay Deepak",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^1.7.10",
+    "electron-packager": "^10.1.0",
+    "electron-winstaller": "^2.6.3"
+  }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add New Todo</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label >Enter Yuor Todo</label>
+            <input type="text" autofocus>
+        </div>
+        <button type="submit">Add Todo</button>
+    </form>
+    <script>
+        const electron = require('electron');
+        const { ipcRenderer } = electron;
+        document.querySelector('form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            const value = document.querySelector('input').value;
+            ipcRenderer.send('todo:add', value);
+        });
+    </script>
+</body>
+</html>
